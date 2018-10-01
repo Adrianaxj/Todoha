@@ -27,6 +27,7 @@ function updateShowList(){
         span.appendChild(checkbox);
         span.appendChild(node);
         
+        
         listtag.appendChild(span);
         //listtag.appendChild(checkbox);
         //listtag.appendChild(node);
