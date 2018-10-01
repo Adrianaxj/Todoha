@@ -8,6 +8,7 @@ function insertText() {
 
 function updateShowList(){
     var listtag = document.getElementById("todoList");
+    var textHere = document.getElementById("input");
     while (listtag.firstChild) {
         listtag.removeChild(listtag.firstChild);
     }
@@ -17,22 +18,65 @@ function updateShowList(){
         span.classList.add('row');
         
         var checkbox = document.createElement("input");
+
         checkbox.type = "checkbox";
         checkbox.id = "checkbox"+i;
         var node = document.createElement("span");
-        var br = document.createElement("br");
         var text = document.createTextNode(todoList[i]);
         
         node.appendChild(text);
         span.appendChild(checkbox);
         span.appendChild(node);
         
-        
+
+        textHere.value="";
         listtag.appendChild(span);
         //listtag.appendChild(checkbox);
         //listtag.appendChild(node);
-        listtag.appendChild(br);
     }
+}
+
+function KlickAll(){
+   
+    for(let i = 0; i < document.getElementById("todoList").childElementCount; i++)
+    {
+        let node = document.getElementById("checkbox"+i).parentNode;
+        node.style.display = "flex";
+    }
+}
+
+function klickActive(){
+
+    for(let i = 0; i < document.getElementById("todoList").childElementCount; i++)
+    {
+        if(document.getElementById("checkbox"+i).checked)
+        {
+            let node = document.getElementById("checkbox"+i).parentNode;
+            node.style.display = "none";
+        }
+        else
+        {
+            let node = document.getElementById("checkbox"+i).parentNode;
+            node.style.display = "flex";
+        }
+    }
+}
+
+function klickCompleted(){
+    for(let i = 0; i < document.getElementById("todoList").childElementCount; i++)
+    {
+        let node = document.getElementById("checkbox"+i).parentNode;
+
+        if(document.getElementById("checkbox"+i).checked)
+        {
+            node.style.display = "flex";
+        }
+        else 
+        {
+            node.style.display = "none";
+        }
+    }
+
 }
 
 function addLabel(){
