@@ -57,3 +57,11 @@ body{
     height: 100px;
     width: 40%;
 }
+
+.hidde {
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+}

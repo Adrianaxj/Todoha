@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1 class="todo">todo</h1>
+    <h1 class="todos">todos</h1>
 <div class="searchBar">
     <input id="input" placeholder="What needs to be done?" autofocus="">
     <button id="search" onclick="insertText()">add</button>
@@ -19,9 +19,9 @@
 
 <script src="projekt.js"></script>
 
-<button onclick="KlickAll()" type="button">All</button>
-<button onclick="klickActive()" type="buttom">Active</button>
-<button onclick="klickCompleted()" type="buttom">Completed</button>
-<button onclick="ClearCompleted()" type="button">ClearCompleted</button>
+<button onclick="clickAll()" type="button">All</button>
+<button onclick="clickActive()" type="buttom">Active</button>
+<button onclick="clickCompleted()" type="buttom">Completed</button>
+<button id="ClearCompleted" onclick="ClearCompleted()" type="button">ClearCompleted</button>
 </body>
 </html>

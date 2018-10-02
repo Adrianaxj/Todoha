@@ -36,7 +36,7 @@ function updateShowList(){
     }
 }
 
-function KlickAll(){
+function clickAll(){
    
     for(let i = 0; i < document.getElementById("todoList").childElementCount; i++)
     {
@@ -45,7 +45,7 @@ function KlickAll(){
     }
 }
 
-function klickActive(){
+function clickActive(){
 
     for(let i = 0; i < document.getElementById("todoList").childElementCount; i++)
     {
@@ -62,7 +62,7 @@ function klickActive(){
     }
 }
 
-function klickCompleted(){
+function clickCompleted(){
     for(let i = 0; i < document.getElementById("todoList").childElementCount; i++)
     {
         let node = document.getElementById("checkbox"+i).parentNode;
@@ -78,6 +78,22 @@ function klickCompleted(){
     }
 
 }
+function ClearCompleted(){
+    
+    for(let i = 0; i < document.getElementById("todoList").childElementCount; i++)
+    {
+        let node = document.getElementById("checkbox"+i);
+        if(node.checked)
+        {
+            node.remove(node);
+            
+        
+        } 
+    }
+    document.getElementById("ClearCompleted").style.visibility = "hidden";
+    updateShowList();
+}
+
 
 function addLabel(){
     var attribut = document.createElement("checkbox", "type");
